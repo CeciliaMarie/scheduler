@@ -1,0 +1,37 @@
+[
+    {
+      "id": "CPSC230",
+      "course": "CPSC 230",
+      "offered": "Every Semester",
+      "prereq": "None",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC298",
+      "course": "CPSC 298",
+      "offered": "Every Semester",
+      "prereq": "None",
+      "credits": "1"
+    },
+    {
+      "id": "MATH110",
+      "course": "MATH 110",
+      "offered": "Every Semester",
+      "prereq": "MATH 99",
+      "credits": "3"
+    },
+    {
+      "id": "FFC100",
+      "course": "FFC 100",
+      "offered": "Every Semester",
+      "prereq": "None",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC231",
+      "course": "CPSC 231",
+      "offered": "Every Semester",
+      "prereq": "CPSC 230",
+      "credits": "3"
+    }
+  ]

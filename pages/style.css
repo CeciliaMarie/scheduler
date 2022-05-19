@@ -1,0 +1,12 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+.Classes{
+    padding: 16;
+    margin: "0 0 8px 0";
+    minHeight: "50px";
+    backgroundColor: "#263B4A";
+    color: "white";
+}
