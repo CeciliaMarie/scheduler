@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 2;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
   }
 `
 
@@ -32,6 +33,7 @@ function useWindowSize() {
     height: undefined,
   });
 
+
   useEffect(() => {
     // only execute all the code below in client side
     if (typeof window !== 'undefined') {
@@ -43,6 +45,7 @@ function useWindowSize() {
           height: window.innerHeight,
         });
       }
+      console.log(window.innerWidth);
     
       // Add event listener
       window.addEventListener("resize", handleResize);
@@ -59,6 +62,7 @@ function useWindowSize() {
 
 export default function App({ Component, pageProps }) {
   const size = useWindowSize();
+  console.log(size);
 
   const [isDesktop, setDesktop] = useState(size.innerWidth > 650);
 
@@ -70,6 +74,7 @@ export default function App({ Component, pageProps }) {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
   });
+  
 
   return (
     <>
@@ -93,17 +98,18 @@ export default function App({ Component, pageProps }) {
           
 
             <div >
-              <h1 style={{display: "flex", padding: 16 ,margin: "0 0 8px 0",minHeight: "50px", justifyContent:"center"}}>
+              <h1 style={{display: "flex",color: "#231F20", fontSize: "3.8rem", fontWeight:"800", padding: 8, minHeight: "50px", justifyContent:"center"}}>
                 Chapman Four Year Scheduler</h1>
               
-              <h2 style={{display: "flex", padding: 16 ,margin: "0 0 8px 0",minHeight: "50px", justifyContent:"center"}}>
+              <h2 style={{display: "flex", color: "#A50034", fontSize: "1.6rem", padding: 8, minHeight: "50px", justifyContent:"center"}}>
                 Major: Software Engineering</h2>
             </div>
-            {isDesktop ? (
-              <Testing/> ):( 
-                <h2 style={{display: "flex", padding: 16 ,margin: "0 0 8px 0",color: "red", minHeight: "50px", justifyContent:"center"}}
+            {/* {isDesktop ? ( */}
+              <Testing/> 
+              {/* ):(  */}
+                {/* <h2 style={{display: "flex", padding: 16 ,margin: "0 0 8px 0",color: "red", minHeight: "50px", justifyContent:"center"}}
                 >Sorry this part of the page is only viewable on a larger device</h2>
-              )}
+              )} */}
               {/* <DragDrop/> */}
           </div>
         </DndProvider>

@@ -107,10 +107,6 @@ const onDragEnd = (result, columns, setColumns) => {
 function Testing() {
   const [columns, setColumns] = useState(columnsFromBackend);
   return (
-    // <div style={{display:"flex", justifyContent: "center"}}>
-    //   <h1>Four Year Scheduler</h1>
-    //   <h2>Major: Software Engineering</h2>
-    // </div>
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
@@ -124,7 +120,8 @@ function Testing() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center"
+                alignItems: "center",
+                color: "#231F20"
               }}
               key={columnId}
             >
@@ -138,8 +135,8 @@ function Testing() {
                         ref={provided.innerRef}
                         style={{
                           background: snapshot.isDraggingOver
-                            ? "lightblue"
-                            : "lightgrey",
+                            ? "#6E6259"
+                            : "#DDCBA4",
                           padding: 4,
                           width: 250,
                           minHeight: 500
@@ -164,8 +161,8 @@ function Testing() {
                                       margin: "0 0 8px 0",
                                       minHeight: "50px",
                                       backgroundColor: snapshot.isDragging
-                                        ? "#263B4A"
-                                        : "#456C86",
+                                        ? "#7a0027"
+                                        : "#A50034",
                                       color: "white",
                                       ...provided.draggableProps.style
                                     }}
