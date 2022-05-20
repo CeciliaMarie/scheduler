@@ -95,6 +95,7 @@ export default function App({ Component, pageProps }) {
               
             </Tab>
           </Tabs> */}
+          {/* useEffect() */}
           
 
             <div >
