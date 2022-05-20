@@ -3,31 +3,8 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { resetServerContext } from "react-beautiful-dnd";
 import itemsFromBackend from './ClassList.json';
 import styled from "styled-components"
-
-
-
-const columnsFromBackend = {
-  ["1"]: {
-    name: "All Classes",
-    items: itemsFromBackend
-  },
-  ["2"]: {
-    name: "2019-2020",
-    items: []
-  },
-  ["3"]: {
-    name: "2020-2021",
-    items: []
-  },
-  ["4"]: {
-    name: "2021-2022",
-    items: []
-  },
-  ["5"]: {
-    name: "2022-2023",
-    items: []
-  }
-};
+import { supabase } from '../../lib/supabase'
+import {useEffect} from "react"
 
 
 const onDragEnd = (result, columns, setColumns) => {
@@ -69,11 +46,61 @@ const onDragEnd = (result, columns, setColumns) => {
     });
   }
 };
+const columnsFromBackend = {
+  ["1"]: {
+    name: "All Classes",
+    items: itemsFromBackend
+  },
+  ["2"]: {
+    name: "2019-2020",
+    items: []
+  },
+  ["3"]: {
+    name: "2020-2021",
+    items: []
+  },
+  ["4"]: {
+    name: "2021-2022",
+    items: []
+  },
+  ["5"]: {
+    name: "2022-2023",
+    items: []
+  }
+};
 
 export default function Table() {
 
   const [columns, setColumns] = useState(columnsFromBackend);
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
   
+  useEffect(() => {
+    fetchDataFromSupabase()
+  },[loading])
+  
+  // fetch data function example
+  const fetchDataFromSupabase = async () => {
+    let { data: classes, error } = await supabase
+        .from('classes')
+        .select('*')
+    if (error) setError(error.message)
+    else {
+        setData(classes)
+        setLoading(false)
+    }
+  }
+  
+  if(loading){
+    return <p style={{ display: "flex", padding: 16 ,margin: "15", fontSize:"2rem", color: "#A50034", minHeight: "50px", justifyContent:"center"}}
+    >loading..</p>
+  }
+  if(error){
+    <p style={{ display: "flex", padding: 16 ,margin: "15", fontSize:"2rem", color: "#A50034", minHeight: "50px", justifyContent:"center"}}
+    >{JSON.stringify}</p>
+  }
+
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <DragDropContext

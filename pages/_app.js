@@ -5,6 +5,7 @@ import Table from './components/Table';
 import { resetServerContext } from "react-beautiful-dnd"
 import 'react-tabs/style/react-tabs.css';
 import { useMediaQuery } from 'react-responsive'
+import { useState, useEffect} from "react"
 
 
 const GlobalStyle = createGlobalStyle`
