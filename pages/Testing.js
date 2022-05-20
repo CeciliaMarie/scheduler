@@ -7,6 +7,27 @@ import { resetServerContext } from "react-beautiful-dnd"
 
 const itemsFromBackend = [
   {
+    id: "230",
+    class: "CPSC 230",
+    offered: "Every Semester",
+    prereq: "None",
+    credits: "3"
+  },
+  {
+    id: "298",
+    class: "CPSC 298",
+    offered: "Every Semester",
+    prereq: "None",
+    credits: "1"
+  },
+  {
+    id: "110",
+    class: "MATH 110",
+    offered: "Every Semester",
+    prereq: "MATH 99",
+    credits: "3"
+  },
+  {
     id: "100",
     class: "FFC 100",
     offered: "Every Semester",
@@ -21,115 +42,10 @@ const itemsFromBackend = [
     credits: "1" 
   },
   {
-    id: "200",
-    class: "SCI 200",
-    offered: "Every Semester",
-    prereq: "FFC 150",
-    credits: "1" 
-  },
-  {
-    id: "250",
-    class: "SCI 250",
-    offered: "Every Semester",
-    prereq: "FFC 200",
-    credits: "1" 
-  },
-  {
-    id: "115",
-    class: "MATH 115",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "4"
-  },
-  {
-    id: "116",
-    class: "MATH 116",
-    offered: "Every Semester",
-    prereq: "MATH 115",
-    credits: "4"
-  },
-  {
-    id: "203",
-    class: "MATH 203",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "3"
-  },
-  {
-    id: "215",
-    class: "MATH 215",
-    offered: "Every Semester",
-    prereq: "MATH 116",
-    credits: "3"
-  },
-  {
-    id: "250",
-    class: "MATH 250",
-    offered: "Every Semester",
-    prereq: "MATH 104 or equivalent",
-    credits: "3"
-  },
-  {
-    id: "230",
-    class: "CPSC 230",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "3"
-  },
-  {
     id: "231",
     class: "CPSC 231",
     offered: "Every Semester",
     prereq: "CPSC 230",
-    credits: "3"
-  },
-  {
-    id: "236",
-    class: "CPSC 236",
-    offered: "Every Semester",
-    prereq: "CPSC 230",
-    credits: "3"
-  },
-  {
-    id: "285",
-    class: "CPSC 285",
-    offered: "Every Semester",
-    prereq: "CPSC 230",
-    credits: "3"
-  },
-  {
-    id: "298",
-    class: "CPSC 298",
-    offered: "Every Semester",
-    prereq: "CPSC 230",
-    credits: "3"
-  },
-  {
-    id: "298",
-    class: "CPSC 298",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "1"
-  },
-  {
-    id: "298",
-    class: "CPSC 298",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "1"
-  },
-  {
-    id: "350",
-    class: "CPSC 350",
-    offered: "Every Semester",
-    prereq: "CPSC 231",
-    credits: "3"
-  },
-  {
-    id: "354",
-    class: "CPSC 354",
-    offered: "Every Semester",
-    prereq: "CPSC 350",
     credits: "3"
   },
   
