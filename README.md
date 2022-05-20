@@ -1,4 +1,4 @@
-Cecilia Marie Abrahamsson
+##Cecilia Marie Abrahamsson
 
 # Website link
 https://chapmanscheduler.netlify.app/
@@ -86,12 +86,12 @@ export default () => (
 
 </details>
 
-### Used Resources
-Style Guide and Fonts
+# Used Resources
+## Style Guide and Fonts
 - https://brand.chapman.edu/#marketing-toolkit
 - https://fonts.google.com/specimen/Merriweather+Sans
 
-Links
+## Links
 - https://www.w3.org/International/tutorials/language-decl/#:~:text=Always%20add%20a%20lang%20attribute,default%20language%20of%20your%20page.&text=If%20this%20is%20XHTML%201,(with%20the%20same%20value).
 - https://www.npmjs.com/package/react-responsive
 - https://www.freecodecamp.org/news/how-to-add-drag-and-drop-in-react-with-react-beautiful-dnd/
@@ -102,7 +102,7 @@ Links
 - https://salesforce-ux.github.io/dnd-a11y-patterns/#/?_k=eg9hkg
 - https://www.codemag.com/article/1803021/Eliminate-HTML-Tables-for-Better-Mobile-Web-Apps
 
-You-Tube Videos
+## You-Tube Videos
 - https://www.youtube.com/watch?time_continue=1428&v=Vqa9NMzF3wc&feature=emb_logo
 - https://www.youtube.com/watch?v=aYZRRyukuIw
 - https://egghead.io/lessons/react-persist-list-reordering-with-react-beautiful-dnd-using-the-ondragend-callback
