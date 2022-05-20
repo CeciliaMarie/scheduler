@@ -1,37 +1,171 @@
 [
     {
-      "id": "CPSC230",
-      "course": "CPSC 230",
-      "offered": "Every Semester",
-      "prereq": "None",
-      "credits": "3"
-    },
-    {
-      "id": "CPSC298",
-      "course": "CPSC 298",
-      "offered": "Every Semester",
-      "prereq": "None",
-      "credits": "1"
-    },
-    {
-      "id": "MATH110",
-      "course": "MATH 110",
-      "offered": "Every Semester",
-      "prereq": "MATH 99",
-      "credits": "3"
-    },
-    {
       "id": "FFC100",
-      "course": "FFC 100",
+      "class": "FFC 100",
+      "offered": "Every Semester",
+      "prereq": "None",
+      "credits": "3"
+    },
+    {
+      "id" : "SCI150",
+      "class" : "SCI 150",
+      "offered" : "Every Semester",
+      "prereq" : "FFC 100",
+      "credits" : "1" 
+    },
+    {
+      "id": "SCI200",
+      "class" : "SCI 200",
+      "offered": "Every Semester",
+      "prereq": "SCI 150",
+      "credits": "1" 
+    },
+    {
+      "id": "SCI250",
+      "class" : "SCI 250",
+      "offered": "Every Semester",
+      "prereq": "SCI 200",
+      "credits": "1" 
+    },
+    {
+      "id": "MATH115",
+      "class" : "MATH 115",
+      "offered": "Fall",
+      "prereq": "MATH 104 or Equivalent",
+      "credits": "3"
+    },
+    {
+      "id": "MATH116",
+      "class" : "MATH 116",
+      "offered": "Spring",
+      "prereq": "MATH 115",
+      "credits": "3"
+    },
+    {
+      "id": "MATH203",
+      "class" : "MATH 203",
+      "offered": "Every Semester",
+      "prereq": "MATH 99 or Equivalent",
+      "credits": "3"
+    },
+    {
+      "id": "MATH215",
+      "class" : "MATH 215",
+      "offered": "Fall",
+      "prereq": "MATH 116",
+      "credits": "3"
+    },
+    {
+      "id": "MATH250",
+      "class" : "MATH 250",
+      "offered": "Every Semester",
+      "prereq": "MATH 104",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC230",
+      "class": "CPSC 230",
       "offered": "Every Semester",
       "prereq": "None",
       "credits": "3"
     },
     {
       "id": "CPSC231",
-      "course": "CPSC 231",
+      "class": "CPSC 231",
       "offered": "Every Semester",
       "prereq": "CPSC 230",
       "credits": "3"
+    },
+    {
+      "id": "CPSC236",
+      "class": "CPSC 236",
+      "offered": "Every Semester",
+      "prereq": "CPSC 230",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC285",
+      "class": "CPSC 285",
+      "offered": "Every Semester",
+      "prereq": "CPSC 230",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC298",
+      "class": "CPSC 298",
+      "offered": "Every Semester",
+      "prereq": "None",
+      "credits": "1"
+    },
+    {
+      "id": "CPSC350",
+      "class": "CPSC 350",
+      "offered": "Every Semester",
+      "prereq": "CPSC 231",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC354",
+      "class": "CPSC 354",
+      "offered": "Fall",
+      "prereq": "CPSC 350",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC355",
+      "class": "CPSC 355",
+      "offered": "Every Year",
+      "prereq": "CPSC 231",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC359",
+      "class": "CPSC 359",
+      "offered": "Every Year",
+      "prereq": "CPSC 355",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC380",
+      "class": "CPSC 380",
+      "offered": "Every Year",
+      "prereq": "CPSC 350",
+      "credits": "3"
+    },
+    {
+      "id": "CPSC408",
+      "class": "CPSC 408",
+      "offered": "Every Semester",
+      "prereq": "CPSC 236, CPSC 350",
+      "credits": "3"
+    },
+    {
+      "id": "SE300",
+      "class": "SE 300",
+      "offered": "Fall",
+      "prereq": "CPSC 231",
+      "credits": "3"
+    },
+    {
+      "id": "SE310",
+      "class": "SE 310",
+      "offered": "Fall",
+      "prereq": "CPSC 231",
+      "credits": "3"
+    },
+    {
+      "id": "SE320",
+      "class": "SE 320",
+      "offered": "Spring",
+      "prereq": "CPSC 350, SE 300, SE 310",
+      "credits": "3"
+    },
+    {
+      "id": "SE498",
+      "class": "SE 498",
+      "offered": "Spring",
+      "prereq": "SE 320",
+      "credits": "3"
     }
   ]
+  

@@ -1,55 +1,10 @@
 import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { resetServerContext } from "react-beautiful-dnd"
+import { resetServerContext } from "react-beautiful-dnd";
+import itemsFromBackend from './ClassList.json';
+import styled from "styled-components"
 
 
-// import Tabs from "./components/Tabs";
-
-const itemsFromBackend = [
-  {
-    id: "230",
-    class: "CPSC 230",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "3"
-  },
-  {
-    id: "298",
-    class: "CPSC 298",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "1"
-  },
-  {
-    id: "110",
-    class: "MATH 110",
-    offered: "Every Semester",
-    prereq: "MATH 99",
-    credits: "3"
-  },
-  {
-    id: "100",
-    class: "FFC 100",
-    offered: "Every Semester",
-    prereq: "None",
-    credits: "3"
-  },
-  {
-    id: "150",
-    class: "SCI 150",
-    offered: "Every Semester",
-    prereq: "FFC 100",
-    credits: "1" 
-  },
-  {
-    id: "231",
-    class: "CPSC 231",
-    offered: "Every Semester",
-    prereq: "CPSC 230",
-    credits: "3"
-  },
-  
-];
 
 const columnsFromBackend = {
   ["1"]: {
@@ -80,12 +35,14 @@ const onDragEnd = (result, columns, setColumns) => {
   const { source, destination } = result;
 
   if (source.droppableId !== destination.droppableId) {
+
     const sourceColumn = columns[source.droppableId];
     const destColumn = columns[destination.droppableId];
     const sourceItems = [...sourceColumn.items];
     const destItems = [...destColumn.items];
     const [removed] = sourceItems.splice(source.index, 1);
     destItems.splice(destination.index, 0, removed);
+
     setColumns({
       ...columns,
       [source.droppableId]: {
@@ -98,6 +55,7 @@ const onDragEnd = (result, columns, setColumns) => {
       }
     });
   } else {
+
     const column = columns[source.droppableId];
     const copiedItems = [...column.items];
     const [removed] = copiedItems.splice(source.index, 1);
@@ -112,16 +70,15 @@ const onDragEnd = (result, columns, setColumns) => {
   }
 };
 
-function Testing() {
+export default function Table() {
+
   const [columns, setColumns] = useState(columnsFromBackend);
+  
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
       >
-        {/* Figure out how to map only the first column */}
-        {/* figure out how to make tabs and put the table in a tab */}
-        {/* then map the rest of the columns */}
         {Object.entries(columns).map(([columnId, column], index) => {
           return (
             <div
@@ -129,7 +86,8 @@ function Testing() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                color: "#231F20"
+                color: "#6E6259"
+                
               }}
               key={columnId}
             >
@@ -159,7 +117,7 @@ function Testing() {
                             >
                               {(provided, snapshot) => {
                                 return (
-                                  <div
+                                  <Card
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
@@ -175,11 +133,11 @@ function Testing() {
                                       ...provided.draggableProps.style
                                     }}
                                   >
-                                    <p>Class: {item.class}</p>
-                                    <p>Offered: {item.offered}</p>
-                                    <p>Prereqs: {item.prereq}</p>
-                                    <p>Credits: {item.credits}</p>
-                                  </div>
+                                    <p><b>Class:</b> {item.class}</p>
+                                    <p><b>Offered:</b> {item.offered}</p>
+                                    <p><b>Prereqs:</b> {item.prereq}</p>
+                                    <p><b>Credits:</b> {item.credits}</p>
+                                  </Card>
                                 );
                               }}
                             </Draggable>
@@ -200,4 +158,5 @@ function Testing() {
 }
 
 resetServerContext()
-export default Testing;
+
+const Card = styled.div``
