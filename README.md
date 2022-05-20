@@ -80,3 +80,25 @@ export default () => (
 ```
 
 </details>
+
+### Used Resources
+Style Guide and Fonts
+- https://brand.chapman.edu/#marketing-toolkit
+- https://fonts.google.com/specimen/Merriweather+Sans
+
+Links
+- https://www.w3.org/International/tutorials/language-decl/#:~:text=Always%20add%20a%20lang%20attribute,default%20language%20of%20your%20page.&text=If%20this%20is%20XHTML%201,(with%20the%20same%20value).
+- https://www.npmjs.com/package/react-responsive
+- https://www.freecodecamp.org/news/how-to-add-drag-and-drop-in-react-with-react-beautiful-dnd/
+- https://thewebdev.info/2021/11/20/how-to-conditionally-render-items-based-on-viewport-size-in-react/
+- https://react-dnd.github.io/react-dnd/docs/troubleshooting
+- https://blog.logrocket.com/drag-and-drop-react-dnd/
+- https://www.codedaily.io/tutorials/Using-react-beautiful-dnd-with-NextJS
+- https://salesforce-ux.github.io/dnd-a11y-patterns/#/?_k=eg9hkg
+- https://www.codemag.com/article/1803021/Eliminate-HTML-Tables-for-Better-Mobile-Web-Apps
+
+You-Tube Videos
+- https://www.youtube.com/watch?time_continue=1428&v=Vqa9NMzF3wc&feature=emb_logo
+- https://www.youtube.com/watch?v=aYZRRyukuIw
+- https://egghead.io/lessons/react-persist-list-reordering-with-react-beautiful-dnd-using-the-ondragend-callback
+- https://www.youtube.com/watch?v=4bzJrEETW4w
